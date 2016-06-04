@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" media="screen" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.min.css">
+
+	<title>PATRICK</title>
+
+	<!--  -->
+
+	<style>
+	</style>
+
+</head>
+
+<body>
+<div>
+    
+	<div class="container col-md-8">
+    <h1>If I buy <input type="number" id="userSaid"> tickets/day</h1>
+        <form>
+        <div class="col-md-8">
+        <button class="btn btn-lg" onclick="getUserSaid()">Submit</button>
+        </div>
+    
+        </form>
+    
+</div>
+      
+    <div class="col-md-8">
+    <h2>I will win the lottery in <span id="botResponse" class="bold"></span>days</h2>
+          </div>  
+    </div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+	<script>
+        
+        
+        //this is a function that recieves the userSaid and call the stripResponse
+        
+        function getUserSaid(){    
+        var said = document.getElementById("userSaid").value;
+        var days = said/chances;
+        var chances = 259000000;
+            document.getElementById("botResponse").innerHTML=days;
+            console.log=days;
+        }
+        
+    
+        //this is a function that strips the response
+        
+        /*function stripUserSaid(userSaid){
+        //all punctuation marks I want to strip    
+            var punctRE = /[\u2000-\u206F\u2E00-\u2E7F\\'!"#$%&()*+,\-.\/:;<=>?@\[\]^_`{|}~]/g;
+            //fixes the spaces after I remove a bunch of punctuation
+            var spaceRE = /\s+/g;
+            var str = userSaid; 
+            //use string replace to strip the text
+            var saidStripped = str.replace(punctRE, '').replace(spaceRE, ' ');
+            //convert to lower case
+            var saidLower = saidStripped.toLowerCase();
+        
+            matchResponse(saidLower);
+}
+        
+        //this is a function that loops through vocab and finds botresponse
+        
+        function matchResponse(saidLower){
+            for (var i = 0; i <vocab.length; i++) {
+            if (saidLower == vocab[i][0] ){
+                var botResponse = vocab[i][1];
+            document.getElementById("botResponse").innerHTML=botResponse;
+                return;
+            }else { var botResponse = "I don't understand"}
+        }
+            
+        }
+        
+        //Checks for eneter press
+        $(document).keypress(function (e) {
+            if (e.which == 13) {
+                checkSaid();
+            }
+        });
+        */
+        
+        
+        
+        
+	</script>
+
+</body>
+
+</html>
